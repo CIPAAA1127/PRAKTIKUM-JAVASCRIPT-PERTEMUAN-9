@@ -1,0 +1,25 @@
+const namaKaryawan = "Budi Santoso";
+let gajiPokok = 5000000;
+let tunjangan = 1000000;
+let bonus = 500000;
+
+const hitungGaji = (nama, pokok, tunjangan, bonus) => {
+    let totalPendapatan = pokok + tunjangan + bonus;
+    let potongan = totalPendapatan * 0.05;
+    let gajiBersih = totalPendapatan - potongan;
+
+    return `
+    ------SLIP GAJI KARYAWAN------
+    Nama Karyawan  : ${nama}
+    Gaji Pokok     : Rp${pokok.toLocaleString("id-ID")}
+    Tunjangan      : Rp${tunjangan.toLocaleString("id-ID")}
+    Bonus          : Rp${bonus.toLocaleString("id-ID")}
+    ------------------------------
+    Total Pendapatan : Rp${totalPendapatan.toLocaleString("id-ID")}
+    Potongan (5%)    : Rp${potongan.toLocaleString("id-ID")}
+    Gaji Bersih      : Rp${gajiBersih.toLocaleString("id-ID")}
+    ------------------------------
+    `;
+};
+
+console.log(hitungGaji(namaKaryawan, gajiPokok, tunjangan, bonus));
