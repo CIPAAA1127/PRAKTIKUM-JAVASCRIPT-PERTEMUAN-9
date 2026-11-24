@@ -1,0 +1,16 @@
+const tampilkanIdentitas = () => {
+    const nama = "Andi Pratama";
+    const nim = "2026001";
+    const prodi = "Teknik Rekayasa Multimedia";
+    const semester = 3;
+
+    console.log(`
+=== IDENTITAS MAHASISWA ===
+Nama           : ${nama}
+NIM            : ${nim}
+Program Studi  : ${prodi}
+Semester       : ${semester}
+    `);
+};
+
+tampilkanIdentitas();
